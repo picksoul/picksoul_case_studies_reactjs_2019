@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
-//import CameraIcon from '@material-ui/icons/PhotoCamera';
+import CameraIcon from '@material-ui/icons/PhotoCamera';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -13,19 +13,17 @@ import Grid from '@material-ui/core/Grid';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
-import logo from './img/logo_img/ps_orange.svg';
-import cereal from './img/home_img/cereal.svg';
-import home_heart_and_banner from './img/home_img/home_heart_and_banner.svg';
 
-
-console.log(logo); // /logo.84287d09.svg
 
 const styles = theme => ({
   appBar: {
     position: 'relative',
   },
+  icon: {
+    marginRight: theme.spacing.unit * 2,
+  },
   heroUnit: {
-    backgroundColor: theme.palette.background.black,
+    backgroundColor: theme.palette.background.paper,
   },
   heroContent: {
     maxWidth: 600,
@@ -37,6 +35,8 @@ const styles = theme => ({
   },
   layout: {
     width: 'auto',
+    marginLeft: theme.spacing.unit * 3,
+    marginRight: theme.spacing.unit * 3,
     [theme.breakpoints.up(1100 + theme.spacing.unit * 3 * 2)]: {
       width: 1100,
       marginLeft: 'auto',
@@ -58,7 +58,7 @@ const styles = theme => ({
     flexGrow: 1,
   },
   footer: {
-    backgroundColor: theme.palette.background.Secondary,
+    backgroundColor: theme.palette.background.paper,
     padding: theme.spacing.unit * 6,
   },
 });
@@ -68,12 +68,13 @@ const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 function Album(props) {
   const { classes } = props;
+
   return (
     <React.Fragment>
       <CssBaseline />
       <AppBar position="static" className={classes.appBar}>
         <Toolbar>
-          <img src={logo} alt="Logo" />
+          <CameraIcon className={classes.icon} />
           <Typography variant="h6" color="inherit" noWrap>
             PickSoul
           </Typography>
@@ -83,14 +84,13 @@ function Album(props) {
         {/* Hero unit */}
         <div className={classes.heroUnit}>
           <div className={classes.heroContent}>
-                    <img src={cereal} alt="cereal" />
           <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
             Peter Birlem
           </Typography>
             <Typography component="h3" variant="h4" align="center" color="textSecondary" gutterBottom>
               UX Design & Front-End Engineering
             </Typography>
-            <Typography variant="h6" align="center" color="textSecondary" paragraph>
+            <Typography variant="h5" align="center" color="textSecondary" paragraph>
               100% Whole Brain Goodness
             </Typography>
             <div className={classes.heroButtons}>
@@ -109,12 +109,6 @@ function Album(props) {
             </div>
           </div>
         </div>
-        <Grid container spacing={24} justify="center">
-          <img src={cereal} alt="cereal" />
-        </Grid>
-        <Grid container spacing={24} justify="center">
-          <img src={home_heart_and_banner} alt="home_heart_and_banner" />
-        </Grid>
         <div className={classNames(classes.layout, classes.cardGrid)}>
         <Typography component="h3" variant="h4" align="center" color="textSecondary" gutterBottom>
           Case Studies
@@ -122,7 +116,7 @@ function Album(props) {
           {/* End hero unit */}
           <Grid container spacing={40}>
             {cards.map(card => (
-              <Grid item key={card} sm={6} md={4} lg={4}>
+              <Grid item key={card} xs={12} sm={4} md={3} lg={4}>
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}

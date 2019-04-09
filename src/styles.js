@@ -1,14 +1,15 @@
 
 const Header = {
+  padding: "10px 20px",
+  textAlign: "center",
   color: "white",
   fontSize: "22px"
 }
 
-const Body = {
+const Header = {
   padding: "10px 20px",
   textAlign: "center",
   color: "white",
-  backgroundColor: 'black',
   fontSize: "22px"
 }
 
