@@ -101,19 +101,35 @@ function Album(props) {
               <Grid container spacing={16} justify="center">
                 <Grid item>
                   <Button variant="contained" color="primary">
-                    Main call to action
+                    WORK
                   </Button>
                 </Grid>
                 <Grid item>
-                  <Button variant="outlined" color="primary">
-                    Secondary action
+                  <Button variant="contained" color="primary">
+                    PROCESS
                   </Button>
+                </Grid>
+                <Grid item>
+                  <Button variant="contained" color="primary">
+                    SKILL-O-METER
+                  </Button>
+                </Grid>
+                <Grid item>
+                  <Button variant="contained" color="primary">
+                    EXPERIENCE
+                  </Button>
+                </Grid>
+                <Grid item>
+                  <Button variant="contained" color="primary">
+                    CONTACT
+                  </Button>
+
                 </Grid>
               </Grid>
             </div>
           </div>
         </div>
-        <div className={classNames(classes.layout, classes.cardGrid)}>
+      <div className={classNames(classes.layout, classes.cardGrid)}>
         <Typography component="h3" variant="h4" align="center" color="textSecondary" gutterBottom>
           Case Studies
         </Typography>
@@ -155,7 +171,7 @@ function Album(props) {
           KEEP IT SIMPLE. KEEP IT FRESH.
         </Typography>
         <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-          Copyright 2019 | PICKSOUL | DENVER, COLORADO
+          Designed with love. Developed with react.js | c 2019 Peter Birlem & PickSoul
         </Typography>
       </footer>
       {/* End footer */}

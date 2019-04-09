@@ -9,7 +9,7 @@
 }
 
 .App-header {
-  background-color: "#11c1f3";
+  background-color: #11c1f3;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -30,4 +30,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.MuiAppBar {
+  background-color: #000000!important;
+}
+
+.Album-heroUnit-3 {
+    background-color: orange;
 }
