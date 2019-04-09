@@ -25,7 +25,7 @@ const styles = theme => ({
     position: 'relative',
   },
   heroUnit: {
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: theme.palette.background.black,
   },
   heroContent: {
     maxWidth: 600,
