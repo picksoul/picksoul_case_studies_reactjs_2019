@@ -13,6 +13,7 @@ import Grid from '@material-ui/core/Grid';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
+//import Cereal from './img/home_img/cereal.svg'
 
 
 const styles = theme => ({
@@ -26,7 +27,7 @@ const styles = theme => ({
     backgroundColor: theme.palette.background.paper,
   },
   heroContent: {
-    maxWidth: 600,
+    maxWidth: 1200,
     margin: '0 auto',
     padding: `${theme.spacing.unit * 8}px 0 ${theme.spacing.unit * 6}px`,
   },
@@ -63,6 +64,8 @@ const styles = theme => ({
   },
 });
 
+
+
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 
@@ -75,8 +78,8 @@ function Album(props) {
       <AppBar position="static" className={classes.appBar}>
         <Toolbar>
           <CameraIcon className={classes.icon} />
-          <Typography variant="h6" color="inherit" noWrap>
-            PickSoul
+          <Typography variant="h1" color="white" noWrap>
+            Peter Birlem
           </Typography>
         </Toolbar>
       </AppBar>
@@ -84,6 +87,7 @@ function Album(props) {
         {/* Hero unit */}
         <div className={classes.heroUnit}>
           <div className={classes.heroContent}>
+
           <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
             Peter Birlem
           </Typography>
