@@ -8,9 +8,11 @@
     "bit-bin": "^14.0.5",
     "chart.js": "^2.8.0",
     "classnames": "^2.2.6",
+    "flow-bin": "^0.96.0",
     "material-ui": "^0.20.2",
     "mui": "^0.0.1",
     "muicss": "^0.9.41",
+    "node-sass": "^4.11.0",
     "react": "^16.8.6",
     "react-chartsjs": "^0.2.14",
     "react-dom": "^16.8.6",
@@ -26,7 +28,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,5 +40,13 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@storybook/addon-actions": "^5.0.6",
+    "@storybook/addon-links": "^5.0.6",
+    "@storybook/addons": "^5.0.6",
+    "@storybook/react": "^5.0.6",
+    "babel-loader": "^8.0.5"
+  }
 }

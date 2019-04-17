@@ -1,6 +1,9 @@
 import React from 'react';
+import './picksoul_custom_sass.scss';
+//import { AppBar, Button, Container, CameraIcon, Card, CardActions, CardContent, CardMedia, CssBaseline, Grid, Toolbar, Typography} from 'muicss/react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import Container from '@material-ui/core/Container';
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import CameraIcon from '@material-ui/icons/PhotoCamera';
@@ -13,12 +16,14 @@ import Grid from '@material-ui/core/Grid';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
-//import Cereal from './img/home_img/cereal.svg'
+import PsLogo from'./images/logo_img/ps_drk.svg';
+import Cereal from'./images/home_img/cereal.svg';
 
 
 const styles = theme => ({
   appBar: {
     position: 'relative',
+    backgroundColor: theme.palette.background.black,
   },
   icon: {
     marginRight: theme.spacing.unit * 2,
@@ -27,17 +32,17 @@ const styles = theme => ({
     backgroundColor: theme.palette.background.paper,
   },
   heroContent: {
-    maxWidth: 1200,
+    maxWidth: 2000,
     margin: '0 auto',
-    padding: `${theme.spacing.unit * 8}px 0 ${theme.spacing.unit * 6}px`,
+    padding: `${theme.spacing.unit * 8}px 10 ${theme.spacing.unit * 6}px`,
   },
   heroButtons: {
     marginTop: theme.spacing.unit * 4,
   },
   layout: {
     width: 'auto',
-    marginLeft: theme.spacing.unit * 3,
-    marginRight: theme.spacing.unit * 3,
+    marginLeft: theme.spacing.unit * 2,
+    marginRight: theme.spacing.unit * 2,
     [theme.breakpoints.up(1100 + theme.spacing.unit * 3 * 2)]: {
       width: 1100,
       marginLeft: 'auto',
@@ -77,8 +82,9 @@ function Album(props) {
       <CssBaseline />
       <AppBar position="static" className={classes.appBar}>
         <Toolbar>
+          <img src={PsLogo} alt="PickSoulLogo"/>
           <CameraIcon className={classes.icon} />
-          <Typography variant="h1" color="white" noWrap>
+          <Typography variant="h1" color="white" font='serif' noWrap>
             Peter Birlem
           </Typography>
         </Toolbar>
@@ -88,75 +94,64 @@ function Album(props) {
         <div className={classes.heroUnit}>
           <div className={classes.heroContent}>
 
-          <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-            Peter Birlem
-          </Typography>
-            <Typography component="h3" variant="h4" align="center" color="textSecondary" gutterBottom>
+            <Typography component="h1" variant="h2" align="center" color="textSecondary" gutterBottom>
               UX Design & Front-End Engineering
             </Typography>
             <Typography variant="h5" align="center" color="textSecondary" paragraph>
               100% Whole Brain Goodness
             </Typography>
             <div className={classes.heroButtons}>
-              <Grid container spacing={16} justify="center">
+              <Grid Container spacing={24} justify="center">
                 <Grid item>
                   <Button variant="contained" color="primary">
-                    WORK
+                    Case Studies
                   </Button>
                 </Grid>
                 <Grid item>
                   <Button variant="contained" color="primary">
-                    PROCESS
+                    Process
                   </Button>
                 </Grid>
                 <Grid item>
                   <Button variant="contained" color="primary">
-                    SKILL-O-METER
+                    Resume
                   </Button>
                 </Grid>
                 <Grid item>
                   <Button variant="contained" color="primary">
-                    EXPERIENCE
+                    Contact
                   </Button>
-                </Grid>
-                <Grid item>
-                  <Button variant="contained" color="primary">
-                    CONTACT
-                  </Button>
-
                 </Grid>
               </Grid>
             </div>
           </div>
+                        <img src={Cereal} alt="cereal_img"/>
         </div>
       <div className={classNames(classes.layout, classes.cardGrid)}>
-        <Typography component="h3" variant="h4" align="center" color="textSecondary" gutterBottom>
+        <Typography component="h2" variant="h2" align="center" color="textSecondary" gutterBottom>
           Case Studies
         </Typography>
           {/* End hero unit */}
-          <Grid container spacing={40}>
+          <Grid Container spacing={40}>
             {cards.map(card => (
               <Grid item key={card} xs={12} sm={4} md={3} lg={4}>
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="image: ../home_img/cereal.png" // eslint-disable-line max-len
+                    image="image: ./img/home_img/cereal.png" // eslint-disable-line max-len
                     title="Image title"
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Heading
+                      Revolv Smart Watch UX
                     </Typography>
                     <Typography>
-                      This is a media card. You can use this section to describe the content.
+                      UX research and design for a smart-home application.
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" color="primary">
-                      View
-                    </Button>
-                    <Button size="small" color="primary">
-                      Edit
+                    <Button size="large" variant="contained" align="center" color="primary">
+                      View Case Study
                     </Button>
                   </CardActions>
                 </Card>
